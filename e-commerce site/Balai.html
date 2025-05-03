@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Parts Shop - Balais d'essuie-glace</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">AUTO PARTS</div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Rechercher">
+            <button id="search-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="30" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                </svg>
+            </button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="40" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+                    </svg>
+                </a></li>
+                <li class="connect">
+                    <a href="loginreg.php">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                        </svg>
+                        <br>
+                    </a>
+                </li>
+                <li class="cart-icon">
+                    <a href="panier.php">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="40" fill="currentColor" class="bi bi-basket2-fill" viewBox="0 0 16 16">
+                            <path d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1"/>
+                        </svg>
+                        <span id="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="wrapper">
+        <div id="buttons">
+            <button class="button-value" onclick="window.location.href='Embrayages.html'">Embrayages</button>
+            <button class="button-value" onclick="window.location.href='Huiles.html'">Huiles</button>
+            <button class="button-value" onclick="window.location.href='Freins.html'">Freins</button>
+            <button class="button-value" onclick="window.location.href='Eclairage.html'">Éclairage</button>
+            <button class="button-value" onclick="window.location.href='Batteries.html'">Batteries</button>
+            <button class="button-value" onclick="window.location.href='Balai.html'">Balai d'essuie-glace</button>
+        </div>
+    </div>
+    <br><br><br><br><br>
+
+    <section class="products">
+        <div class="product-card">
+            <img src="img/g1.jpg" alt="Bosch AeroTwin 600mm">
+            <h3>Bosch AeroTwin 600mm</h3>
+            <p>Balai haute performance pour une visibilité optimale</p>
+            <p>Prix: <span class="price">229.900 DT</span></p>
+            <p>Disponibilité: <span style="color: green;">En stock</span></p>
+            <button class="add-to-cart" onclick="addToCart()">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card">
+            <img src="img/g2.jpg" alt="Valeo Silencio 550mm">
+            <h3>Valeo Silencio 550mm</h3>
+            <p>Balai d'essuie-glace silencieux et durable</p>
+            <p>Prix: <span class="price">210.500 DT</span></p>
+            <p>Disponibilité: <span style="color: orange;">Stock limité</span></p>
+            <button class="add-to-cart" onclick="addToCart()">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card">
+            <img src="img/g3.jpg" alt="Michelin RainForce 500mm">
+            <h3>Michelin RainForce 500mm</h3>
+            <p>Résistant à l'usure – Vision claire par tous temps</p>
+            <p>Prix: <span class="price">241.750 DT</span></p>
+            <p>Disponibilité: <span style="color: green;">En stock</span></p>
+            <button class="add-to-cart" onclick="addToCart()">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card">
+            <img src="img/g4.jpg" alt="Denso Hybrid 650mm">
+            <h3>Denso Hybrid 650mm</h3>
+            <p>Technologie hybride pour une pression uniforme</p>
+            <p>Prix: <span class="price">310.000 DT</span></p>
+            <p>Disponibilité: <span style="color: red;">Rupture de stock</span></p>
+            <button class="add-to-cart" onclick="addToCart()">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card">
+            <img src="img/g5.jpeg" alt="Rain-X Vision 600mm">
+            <h3>Rain-X Vision 600mm</h3>
+            <p>Enduit hydrophobe – Répulsion de l'eau immédiate</p>
+            <p>Prix: <span class="price">299.600 DT</span></p>
+            <p>Disponibilité: <span style="color: green;">En stock</span></p>
+            <button class="add-to-cart" onclick="addToCart()">Ajouter au panier</button>
+        </div>
+
+        <div class="product-card">
+            <img src="img/g6.png" alt="Champion Easyvision 530mm">
+            <h3>Champion Easyvision 530mm</h3>
+            <p>Design moderne – Facile à installer</p>
+            <p>Prix: <span class="price">198.900 DT</span></p>
+            <p>Disponibilité: <span style="color: orange;">Stock limité</span></p>
+            <button class="add-to-cart" onclick="addToCart()">Ajouter au panier</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Pièces Détachées Auto. Tous droits réservés.</p>
+    </footer>
+</body>
+<script src="js/script.js"></script>
+</html>

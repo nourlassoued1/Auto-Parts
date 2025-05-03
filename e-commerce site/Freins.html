@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Parts Shop - Freins</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">AUTO PARTS</div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Rechercher">
+            <button id="search-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="30" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                </svg>
+            </button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="40" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                        <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+                    </svg>
+                </a></li>
+                <li class="connect">
+                    <a href="loginreg.php">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                        </svg>
+                        <br>
+                    </a>
+                </li>
+                <li class="cart-icon">
+                    <a href="panier.php">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="40" fill="currentColor" class="bi bi-basket2-fill" viewBox="0 0 16 16">
+                            <path d="M5.929 1.757a.5.5 0 1 0-.858-.514L2.217 6H.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h.623l1.844 6.456A.75.75 0 0 0 3.69 15h8.622a.75.75 0 0 0 .722-.544L14.877 8h.623a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1.717L10.93 1.243a.5.5 0 1 0-.858.514L12.617 6H3.383zM4 10a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm3 0a1 1 0 0 1 2 0v2a1 1 0 1 1-2 0zm4-1a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1"/>
+                        </svg>
+                        <span id="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <div id="buttons">
+            <button class="button-value" onclick="window.location.href='Embrayages.html'">Embrayages</button>
+            <button class="button-value" onclick="window.location.href='Huiles.html'">Huiles</button>
+            <button class="button-value" onclick="window.location.href='Freins.html'">Freins</button>
+            <button class="button-value" onclick="window.location.href='Eclairage.html'">Éclairage</button>
+            <button class="button-value" onclick="window.location.href='Batteries.html'">Batteries</button>
+            <button class="button-value" onclick="window.location.href='Balai.html'">Balai d'essuie-glace</button>
+        </div>
+    </div>  <br><br><br><br><br>
+
+    <section class="products">
+        <!-- Cartes produits avec disponibilité -->
+        <div class="product-card"><img src="img/p21.jpg" alt="Plaquettes ATE"><h3>Plaquettes de frein ATE</h3><p>Haute performance – Compatibles avec plusieurs modèles</p><p>Prix: <span class="price">79.000 DT</span></p><p>Disponibilité: <span style="color: green;">En stock</span></p><button onclick="addToCart()" class="add-to-cart">Ajouter au panier</button></div>
+        <div class="product-card"><img src="img/p22.jpg" alt="Disques Brembo"><h3>Disques de frein Brembo</h3><p>Ventilés – Haute dissipation thermique</p><p>Prix: <span class="price">210.000 DT</span></p><p>Disponibilité: <span style="color: orange;">Stock limité</span></p><button onclick="addToCart()" class="add-to-cart">Ajouter au panier</button></div>
+        <div class="product-card"><img src="img/p23.jpg" alt="Kit Bosch"><h3>Kit frein arrière Bosch</h3><p>Inclut tambours, cylindres et ressorts</p><p>Prix: <span class="price">185.000 DT</span></p><p>Disponibilité: <span style="color: green;">En stock</span></p><button onclick="addToCart()" class="add-to-cart">Ajouter au panier</button></div>
+        <div class="product-card"><img src="img/p24.avif" alt="Liquide DOT 4"><h3>Liquide de frein DOT 4</h3><p>Haute température – 500ml</p><p>Prix: <span class="price">19.900 DT</span></p><p>Disponibilité: <span style="color: green;">En stock</span></p><button onclick="addToCart()" class="add-to-cart">Ajouter au panier</button></div>
+        <div class="product-card"><img src="img/p25.webp" alt="Disques TRW"><h3>Disques TRW</h3><p>Qualité OEM – Résistance élevée</p><p>Prix: <span class="price">149.500 DT</span></p><p>Disponibilité: <span style="color: red;">Rupture de stock</span></p><button onclick="addToCart()" class="add-to-cart">Ajouter au panier</button></div>
+        <div class="product-card"><img src="img/p26.png" alt="Plaquettes Valeo"><h3>Plaquettes Valeo</h3><p>Sans bruit – Longue durée</p><p>Prix: <span class="price">63.000 DT</span></p><p>Disponibilité: <span style="color: green;">En stock</span></p><button onclick="addToCart()" class="add-to-cart">Ajouter au panier</button></div>
+        <div class="product-card"><img src="img/p27.jpeg" alt="Tambours Ferodo"><h3>Tambours Ferodo</h3><p>Freinage stable – Acier renforcé</p><p>Prix: <span class="price">98.000 DT</span></p><p>Disponibilité: <span style="color: orange;">Stock limité</span></p><button onclick="addToCart()" class="add-to-cart">Ajouter au panier</button></div>
+        <div class="product-card"><img src="img/p28.avif" alt="Capteur ABS"><h3>Capteur ABS universel</h3><p>Compatibilité large – Facile à installer</p><p>Prix: <span class="price">42.300 DT</span></p><p>Disponibilité: <span style="color: green;">En stock</span></p><button onclick="addToCart()" class="add-to-cart">Ajouter au panier</button></div>
+        <div class="product-card"><img src="img/p29.webp" alt="Maître-cylindre"><h3>Maître-cylindre frein</h3><p>Fiabilité et précision hydraulique</p><p>Prix: <span class="price">132.000 DT</span></p><p>Disponibilité: <span style="color: green;">En stock</span></p><button onclick="addToCart()" class="add-to-cart">Ajouter au panier</button></div>
+        <div class="product-card"><img src="img/p30.jpeg" alt="Flexible frein"><h3>Flexible de frein renforcé</h3><p>Résistant à la pression – 1 pièce</p><p>Prix: <span class="price">22.700 DT</span></p><p>Disponibilité: <span style="color: red;">Rupture de stock</span></p><button onclick="addToCart()" class="add-to-cart">Ajouter au panier</button></div>
+        <div class="product-card"><img src="img/p31.webp" alt="Étrier de frein"><h3>Étrier de frein</h3><p>Refabrication qualité origine</p><p>Prix: <span class="price">164.900 DT</span></p><p>Disponibilité: <span style="color: green;">En stock</span></p><button onclick="addToCart()" class="add-to-cart">Ajouter au panier</button></div>
+        <div class="product-card"><img src="img/p32.jpg" alt="Jeu ressorts"><h3>Ressorts de frein arrière</h3><p>Pour tambour – Kit complet</p><p>Prix: <span class="price">34.600 DT</span></p><p>Disponibilité: <span style="color: green;">En stock</span></p><button onclick="addToCart()" class="add-to-cart">Ajouter au panier</button></div>
+        <div class="product-card"><img src="img/p33.jpg" alt="Frein à main"><h3>Frein à main complet</h3><p>Levier + câble – Universel</p><p>Prix: <span class="price">75.000 DT</span></p><p>Disponibilité: <span style="color: orange;">Stock limité</span></p><button onclick="addToCart()" class="add-to-cart">Ajouter au panier</button></div>
+        <div class="product-card"><img src="img/p34.avif" alt="Huile de frein DOT 5"><h3>Huile frein DOT 5</h3><p>Silicone – Haute performance</p><p>Prix: <span class="price">24.000 DT</span></p><p>Disponibilité: <span style="color: green;">En stock</span></p><button onclick="addToCart()" class="add-to-cart">Ajouter au panier</button></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Pièces Détachées Auto. Tous droits réservés.</p>
+    </footer>
+</body>
+<script src="js/script.js"></script>
+</html>
